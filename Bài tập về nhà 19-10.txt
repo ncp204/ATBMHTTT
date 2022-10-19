@@ -1,0 +1,16 @@
+viết phần mềm truyền gửi file mã hóa (Client- Server)
+Server sẽ mở cổng 1378 để lắng nghe
+Xây dựng protocol để client có thể gửi file lên server an toàn
+Trao đổi file một cách bí mật
+Server sẽ public key của server
+Client sẽ tiến hành tạo khóa đối xứng gửi về server thông qua khóa công khai public key
+Hoàn tất việc trao đổi khóa
+
+1. Client- server phải công khai khóa công cộng (Chỉ server) bất kỳ ai cũng có thể yêu cầu khóa
+công khai của server
+2. Client chọn mã hóa đối xứng mà Client chọn và dùng khóa công khai mã hóa key của mh đối xứng và
+gửi lên server, server sẽ lưu khóa đối xứng
+mà client gửi lên. từ thời điểm đó khi client gửi đến server sẽ dùng khóa đó để mã hóa dữ liệu
+3. Làm bằng bất kì giải thuật nào, các thông tin như chiều dài key tên giải thuật sẽ được gửi lên server bằng public key
+Server lưu trữ khóa đối xứng đó lại
+4. Dùng khóa đó để mã hóa dữ liệu
